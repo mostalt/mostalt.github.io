@@ -1,21 +1,47 @@
-import React, { Component } from 'react';
-import logo from './images/logo.svg';
-import './App.css';
+import React from 'react'
+import styled, { keyframes } from 'styled-components'
+import logo from './images/logo.svg'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Romak</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const StyledApp = styled.div`
+    text-align: center;
 
-export default App;
+    p {
+        font-size: 16px;
+    }
+`
+const Header = styled.header`
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+`
+
+const spin = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+`
+
+const Logo = styled.img`
+    animation: ${spin} infinite 20s linear;
+    height: 80px;
+`
+
+export default () => (
+    <StyledApp>
+        <Header>
+            <Logo src={logo} alt='logo' />
+            <h2>Welcome to Romak</h2>
+        </Header>
+    </StyledApp>
+)
