@@ -4,22 +4,22 @@ import { injectGlobal } from 'styled-components'
 const fonts = [
     {
         family: 'Skolar-PE',
-        path: './fonts/Skolar-PE-Regular',
+        path: `${process.env.PUBLIC_URL}/fonts/Skolar-PE-Regular`,
         formats: ['woff', 'ttf', 'eot', 'otf', 'svg'],
         weight: 400
     }, {
         family: 'Skolar-PE',
-        path: './fonts/Skolar-PE-Bold',
+        path: `${process.env.PUBLIC_URL}/fonts/Skolar-PE-Bold`,
         formats: ['woff', 'ttf', 'eot', 'otf', 'svg'],
         weight: 700
     }, {
         family: 'Geometria',
-        path: './fonts/Geometria',
+        path: `${process.env.PUBLIC_URL}/fonts/Geometria`,
         formats: ['woff', 'ttf', 'eot', 'otf', 'svg'],
         weight: 400
     }, {
         family: 'Geometria',
-        path: './fonts/Geometria-Light',
+        path: `${process.env.PUBLIC_URL}/fonts/Geometria-Light`,
         formats: ['woff', 'ttf', 'eot', 'otf', 'svg'],
         weight: 300
     }
