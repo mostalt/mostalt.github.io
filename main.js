@@ -3,6 +3,7 @@ window.addEventListener("load", function () {
 
   if (window.Telegram.WebApp) {
     window.Telegram.WebApp.ready();
+    window.Telegram.WebApp.initData("INIT");
     Telegram.WebApp.MainButton.setParams({
       text_color: "#fff",
       text: "Main Button",
