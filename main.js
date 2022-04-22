@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
 
   if (window.Telegram.WebApp) {
     window.Telegram.WebApp.ready();
-    window.Telegram.WebApp.initData("INIT");
+
     Telegram.WebApp.MainButton.setParams({
       text_color: "#fff",
       text: "Main Button",
@@ -12,6 +12,7 @@ window.addEventListener("load", function () {
       is_visible: true,
     }).onClick(() => console.log("Main Button Clicked"));
     console.log("READY");
+    console.log(window.Telegram.WebApp.initData, "init data");
   } else {
     console.log("WebApp is undefined");
   }
